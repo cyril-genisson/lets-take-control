@@ -123,7 +123,7 @@ par semaine protégée par mot de passe.
 ```bash
 crontab -e
 1 12 * * * /root/bin/save_config
-0 0 */7 * * tar -cvjf /home/utilisateur/sauvegarde_deploiements/weekly/conf-$(date +"%Y%m%d").tar.bz2 /home/utilisateur/sauvegarde_deploiements/conf-*
+0 0 */7 * * zip -P "MotDePass" /home/utilisateur/sauvegarde_deploiements/weekly/conf-$(date +"%Y%m%d").zip /home/utilisateur/sauvegarde_deploiements
 0 1 */7 * * rm -fR /home/utilisateur/sauvegarde_deploiements/conf-*
 ```
 
